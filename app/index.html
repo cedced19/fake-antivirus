@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Antivirus</title>
+        <link rel="stylesheet" type="text/css" href="vendor/css/main.css">
+        <link rel="stylesheet" type="text/css" href="vendor/css/sweet-alert.css">
+    </head>
+    <body>
+           <main>
+              <h1>Antivirus</h1>
+              <h2>There are no virus now.</h2>
+              <p>Thanks to us you are safe. This app is executing in background.</p>
+              <button id="scan">Scan Now</button>
+           </main>
+           <script type="text/javascript" src="vendor/js/sweet-alert.js"></script>
+           <script>
+            var clicked = false;
+            document.getElementById('scan').onclick = function () {
+                if (clicked) {
+                    swal('Good job!', 'You have already clicked on it! A scan will do soon as possible!', 'success');
+                } else {
+                    swal('Good job!', 'A scan will do soon as possible!', 'success');
+                }
+                clicked = true;
+            }
+           </script>
+    </body>
+</html>
